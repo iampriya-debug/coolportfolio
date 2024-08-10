@@ -1,0 +1,89 @@
+import React from 'react';
+import styled from 'styled-components';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+
+const Container = styled.div`
+  text-align: center;
+  padding: 50px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+`;
+
+const Header = styled.header`
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+`;
+
+const Title = styled.h1`
+  font-size: 3em;
+  margin: 0;
+`;
+
+const Subtitle = styled.h2`
+  font-size: 1.5em;
+  color: #61dafb;
+`;
+
+const ProfilePic = styled.img`
+  width: 150px;
+  border-radius: 50%;
+  margin: 20px 0;
+`;
+
+const Section = styled.section`
+  margin: 20px 0;
+`;
+
+const Link = styled.a`
+  color: #61dafb;
+  margin: 0 10px;
+  font-size: 2em;
+`;
+
+const Footer = styled.footer`
+  margin-top: 50px;
+  color: #888;
+`;
+
+function App() {
+  return (
+    <Container>
+      <Header>
+        <Title>Your Name</Title>
+        <Subtitle>Frontend Developer | React Enthusiast</Subtitle>
+      </Header>
+
+      <ProfilePic src="https://via.placeholder.com/150" alt="Your Name" />
+
+      <Section>
+        <h2>About Me</h2>
+        <p>
+          I am a passionate frontend developer with a love for creating beautiful and functional web applications. I specialize in React and have experience building a variety of projects, from simple landing pages to complex web applications.
+        </p>
+      </Section>
+
+      <Section>
+        <h2>My Work</h2>
+        <p>
+          Check out some of my work on GitHub:
+        </p>
+        <Link href="https://github.com/yourusername" target="_blank">
+          <FaGithub />
+        </Link>
+        <Link href="https://linkedin.com/in/yourusername" target="_blank">
+          <FaLinkedin />
+        </Link>
+        <Link href="https://twitter.com/yourusername" target="_blank">
+          <FaTwitter />
+        </Link>
+      </Section>
+
+      <Footer>
+        &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+      </Footer>
+    </Container>
+  );
+}
+
+export default App;
